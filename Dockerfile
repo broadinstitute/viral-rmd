@@ -21,6 +21,7 @@ RUN apt-get -y -qq install \
     imagemagick libmagick++-dev \
     texlive-base texlive-latex-recommended texlive texlive-latex-extra texlive-extra-utils texlive-fonts-extra \
     fonts-roboto \
+    libudunits2-dev \
     python3 python3-pip python3-pandas python3-plotly \
     r-base r-base-dev \
   && apt-get clean
