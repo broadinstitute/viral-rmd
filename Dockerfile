@@ -31,12 +31,13 @@ ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
 # Install R packages
 RUN R -e "install.packages(c( \
-  'devtools', 'tidyverse', 'sf', \
+  'devtools', 'tidyverse', 'sf', 'ps', \
   'knitr', 'rmarkdown', 'tinytex', 'reticulate', 'kableExtra', \
   'ggplot2', 'ggthemes', 'dplyr', 'plyr', \
   'plotly', \
   'RColorBrewer', 'viridis', 'viridisLite', \
   'phytools' ))"
+RUN R -e "devtools::install_github('UrbanInstitute/urbnmapr', upgrade='never')"
 
 # Install Python
 RUN pip3 install epiweeks
