@@ -38,7 +38,7 @@ RUN R -e "install.packages(c( \
   'plotly', \
   'RColorBrewer', 'viridis', 'viridisLite', \
   'phytools' ))"
-RUN R -e "devtools::install_github('UrbanInstitute/urbnmapr', upgrade='never')"
+RUN R -e "devtools::install_github('UrbanInstitute/urbnmapr')"
 
 # Install Python
 RUN pip3 install epiweeks
