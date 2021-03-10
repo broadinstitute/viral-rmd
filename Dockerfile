@@ -33,7 +33,7 @@ ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 # Install R packages
 RUN R -e "install.packages(c( \
   'devtools', 'BiocManager', 'tidyverse', \
-  'sf', 'ps', 'mapproj', \
+  'sf', 'ps', 'mapproj', 'scatterpie', \
   'knitr', 'rmarkdown', 'tinytex', 'reticulate', 'kableExtra', \
   'ggplot2', 'ggthemes', 'dplyr', 'plyr', \
   'plotly', \
