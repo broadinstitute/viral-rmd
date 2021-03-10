@@ -32,12 +32,14 @@ ENV LANG="en_US.UTF-8" LANGUAGE="en_US:en" LC_ALL="en_US.UTF-8"
 
 # Install R packages
 RUN R -e "install.packages(c( \
-  'devtools', 'tidyverse', 'sf', 'ps', 'mapproj', \
+  'devtools', 'BiocManager', 'tidyverse', \
+  'sf', 'ps', 'mapproj', \
   'knitr', 'rmarkdown', 'tinytex', 'reticulate', 'kableExtra', \
   'ggplot2', 'ggthemes', 'dplyr', 'plyr', \
   'plotly', \
   'RColorBrewer', 'viridis', 'viridisLite', \
   'phytools' ))"
+RUN R -e "BiocManager::install('ggtree', update=FALSE, ask=FALSE)"
 RUN R -e "devtools::install_github('UrbanInstitute/urbnmapr', dependencies=FALSE, upgrade='never')"
 
 # Install Python
